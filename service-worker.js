@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/PurpleHeart/precache-manifest.d01d7e6eb1843a5ab47b2c22d384aa2c.js"
+  "/PurpleHeart/precache-manifest.415e2b5087745ba13cd6941615908fbb.js"
 );
 
 workbox.clientsClaim();
