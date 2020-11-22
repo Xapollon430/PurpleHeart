@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import styled, { keyframes } from "styled-components";
 
@@ -62,7 +61,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p onClick={addHeart}>
-          Click <span className="red">Here</span> Multple Times To Make Purple
+          Click <span className="red">Here</span> Multiple Times To Make Purple
           Hearts Fall.
         </p>
 
