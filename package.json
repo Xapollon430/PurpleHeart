@@ -1,7 +1,6 @@
 {
   "name": "test",
   "version": "0.1.0",
-  "homepage": "https://Xapollon430.github.io/PurpleHeart",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
