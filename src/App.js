@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, cloneElement } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import styled, { keyframes } from "styled-components";
@@ -29,13 +29,19 @@ function App() {
     let heart = heartArray.filter((heart) => heart.key === count)[0];
     if (heart !== undefined) {
       setTimeout(() => {
-        console.log(heartArray, "inside useffect");
+        // setHeartArray([
+        //   ...heartArray.filter(
+        //     (currentHeart) => heart.key !== currentHeart.key
+        //   ),
+        // ]); // fix this by sending in the fresh heartArray to the setHeartArray
 
-        setHeartArray([...heartArray.filter((currentHeart) => heart.key !== currentHeart.key)]); // fix this by sending in the fresh heartArray to the setHeartArray
+        setHeartArray((oldArray) => [
+          ...oldArray.filter((currentHeart) => heart.key !== currentHeart.key),
+        ]);
       }, 2950);
     }
   }, [count]);
-  console.log(heartArray, "outside useffect");
+  console.log(heartArray);
 
   const addHeart = () => {
     count++;
@@ -56,7 +62,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" />
-        <p onClick={addHeart}>Click Multiple Times To Make Purple Heart Fall.</p>
+        <p onClick={addHeart}>
+          Click <span className="red">Here</span> Multple Times To Make Purple
+          Hearts Fall.
+        </p>
 
         {heartArray ? heartArray.map((heart) => heart.jsx) : null}
       </header>
