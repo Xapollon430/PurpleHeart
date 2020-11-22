@@ -61,7 +61,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" />
         <p onClick={addHeart}>
           Click <span className="red">Here</span> Multple Times To Make Purple
           Hearts Fall.
